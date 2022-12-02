@@ -62,4 +62,16 @@ public class HomepageStepDefs {
         homePage.setLoanSubmit();
         System.out.println("Application has been submitted");
     }
+
+    @When("Admin is clicking on admin page")
+    public void adminIsClickingOnAdminPage() {
+        homePage.clickAdminPage();
+    }
+
+    @And("Admin is log in with {string} and {string}")
+    public void adminIsLogInWithAnd(String admin, String pass) {
+        homePage.accountName(admin);
+        homePage.accountPassword(pass);
+
+    }
 }
