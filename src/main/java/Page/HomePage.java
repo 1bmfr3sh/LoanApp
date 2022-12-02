@@ -19,6 +19,7 @@ public class HomePage {
 
     static By SignIn = By.xpath("//input[@type=\"submit\"]");
     static By LoanSubmit = By.xpath("//button");
+    static By ADMIN_PAGE = By.xpath("//a[@href=\"/admin\"]");
 
     public void goToHomepage() {
         driver.get("http://35.178.110.62:8080/");
@@ -53,6 +54,10 @@ public class HomePage {
     }
     public void setLoanSubmit() {
         waitAndClick(LoanSubmit);
+    }
+
+    public void clickAdminPage(){
+        waitAndClick(ADMIN_PAGE);
     }
 
 }
